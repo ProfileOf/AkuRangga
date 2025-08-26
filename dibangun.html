@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situs Sedang dalam Pemeliharaan</title>
+    <style>
+        /* CSS untuk styling halaman */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .container-perbaikan {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 20px;
+            color: #555;
+            margin-top: 20px;
+            min-height: 30px; /* Prevent layout shift */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Website Sedang Dalam Pemeliharaan</h1>
+    <div class="message" id="maintenanceMessage">Mohon tunggu sebentar...</div>
+</div>
+
+<script>
+    // Array kalimat yang ingin ditampilkan
+    const messages = [
+        "Kami sedang memperbarui situs kami.",
+        "Harap bersabar, kami akan kembali segera.",
+        "Terima kasih atas pengertian Anda.",
+        "Situs sedang dalam proses perawatan."
+    ];
+
+    let currentMessageIndex = 0;
+    
+    function changeMessage() {
+        const messageElement = document.getElementById('maintenanceMessage');
+        messageElement.textContent = messages[currentMessageIndex];
+        currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+    }
+
+    // Ganti pesan setiap 2 detik
+    setInterval(changeMessage, 2000);
+</script>
+
+</body>
+</html>

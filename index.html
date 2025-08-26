@@ -1,226 +1,930 @@
+<!-- Bismillahirrahmanirrahiim -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" notranslate="true">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clean UI Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="CpSrUtgv1nbOY7fB6PenHz4N32WsbvWNNL083k3p">
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- link stylesheet  -->
+    <link rel="stylesheet" href="https://suratplus.com/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://suratplus.com/assets-3/css/suratplus-ui-kit.css?version=1.1.4">
+    <link rel="stylesheet" href="https://suratplus.com/assets-3/portofolio/css/style.css?version=1.0.1">
+    <link rel="stylesheet" href="https://suratplus.com/assets-3/portofolio/css/preview.css?version=1.0.5">
+    <link rel="stylesheet" href="https://suratplus.com/assets/css/starter.css" />
+    <link rel="stylesheet" href="https://suratplus.com/assets/css/lineicons.css" />
+    <link rel="stylesheet" href="https://suratplus.com/css/subscribe.css?v=3.0.2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/profil.jpeg" type="image/x-icon" />
+    <style>
+        .portofolio {
+            margin-bottom: 4rem;
+        }
+
+        .round-icon {
+            width: 32px;
+            /* Set the desired width */
+            height: 32px;
+            /* Set the desired height */
+            border-radius: 50%;
+            /* Makes the image round */
+            overflow: hidden;
+            /* Ensures content stays within the border */
+        }
+    </style>
+
+    <meta property="og:image">
+    <meta property="og:title" content="Portofolio  Rangga Dwi Saputra ">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --color-1: #5A40D6;
+            --color-2: #8E78F5;
+            --color-3: #F5F2FF;
+            --filter: invert(23%) sepia(74%) saturate(3124%) hue-rotate(244deg) brightness(87%) contrast(92%);
+        }
+    </style>
+
+    <!-- link stylesheet II  -->
+    <link rel="stylesheet" href="https://suratplus.com/assets-3/portofolio/css/portofolio-2.css?v=1.0.9" />
+    <link rel="stylesheet" href="https://suratplus.com/assets-3/css/suratplus-ui-kit.css?v=1.0.6" />
+    <link rel="stylesheet" href="https://suratplus.com/assets-3/icons/suratplus-icon/sp-icon.min.css?v=1.0.6" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://suratplus.com/landing-page-baru/css/testimonial-01.css?v=1.0.1">
+    <title>Rangga Dwi Saputra</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NJTWDPN5');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P05WXML3TG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-P05WXML3TG');
+    </script>
 </head>
 
 <body>
+    <div class="portofolio portofolio-2">
 
-    <!-- Header -->
-    <header class="header">
-        <a href="#" class="logo"><span>Rangga ds</span></a>
-
-        <ul class="nav-links">
-            <li><a href="#about">Beranda</a></li>
-            <li><a href="#profil">Profil</a></li>
-            <li><a href="#experience">Keahlian</a></li>
-            <li><a href="#projects">Pengalaman</a></li>
-        </ul>
-
-        <i class="fa-solid fa-bars" id="menu-icon"></i>
-
-        <button class="visit-btn">Visit</button>
-    </header>
-
-    <!-- ABOUT -->
-    <section id="about" class="about">
-        <div class="about-container">
-            <img src="../images/pp.png" alt="">
-
-            <div class="info-box">
-                <div class="text">
-                    <h3>Hi, I'm</h3>
-                    <h2>Rangga Saputra</h2>
-                    <span>Frontend developer</span>
+        <!-- Navbar  -->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f069f;">
+            <div class="container">
+                <div class="profile">
+                    <img class="me-2" onerror="this.onerror=null; this.src='https://placehold.co/50x50';"
+                        src="img/profil.jpeg">
+                    <span class="first_name" style="color: white;">Rangga Dwi Saputra</span>
                 </div>
 
-                <div class="btn-group">
-                    <div class="btn">Downlod Cv</div>
-                    <div class="btn">Contact</div>
-                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                <div class="socials">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                    <!-- <i class="fa-brands fa-tiktok"></i> -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROFIL -->
-    <section id="profil" class="profil">
-        <h2 class="section-title">Profil</h2>
-
-        <div class="profil-info">
-
-            <img src="../images/pp2.jpg" alt="">
-
-            <div class="profil-grid">
-                <div class="grid-card">
-                    <h3 style="font-size: 30px;"><i class="fa-solid fa-pen-nib"></i> Tentang Saya</h3>
-                    <p>Memadukan rasa ingin tahu dengan semangat <em>Growth & Impact oriented</em>, melihat setiap
-                        tantangan sebagai kesempatan untuk tumbuh dan memberi arti. Menjadikan proses sama berharganya
-                        dengan hasil.
-
-                    </p>
-                </div>
-                <br>
-                <div class="grid-card">
-                    <h3 style="font-size: 30px;"><i class="fa-solid fa-pen-nib"></i> Pendidikan & Organisasi</h3>
-                    <span>Politeknik Negeri Malang</span>
-                    <h3>2023 - sekarang</h3>
-                    <p>Jurusan Teknologi Informasi Program Studi D4 Teknik Informatika. </p>
-
-                    <br>
-                    <span>PP Anwarul Huda</span>
-                    <h3>2025 - sekarang</h3>
-                    <p>Program Diniyah & berperan dalam pengelolaan kebutuhan logistik dan fasilitas kegiatan santri
-                        serta acara pondok</p>
-                    <br>
-                    <span>IKAWANGI POLINEMA</span>
-                    <h3>2023 - sekarang</h3>
-                    <p>Kontributor MC & Ketua Bidang Kebudayaan, berperan dalam pelatihan generasi baru serta
-                        pengelolaan kegiatan budaya di IKAWANGI Polinema.</p>
-                    <br>
-                    <span>Himpunan Mahasiswa Teknologi Informasi</span>
-                    <h3>2024</h3>
-                    <p>Bergabung dalam Divisi Komunikasi & Informasi. Turut andil peran dalam mengelola arus informasi
-                        internal dan eksternal.</p>
-
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link section-navigator active" aria-current="page" href="#profil">Tentang
+                                Saya</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link section-navigator" href="#pengalaman">Pengalaman</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link section-navigator" href="#projek">Projek</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link section-navigator" href="#skill">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link section-navigator" href="#layanan">Layanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link section-navigator" href="#sosmed">Sosial Media</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </nav>
+        <!-- Navbar End -->
 
-        </div>
-    </section>
-
-    <!-- Experiences -->
-    <section id="experience" class="experience">
-        <h2 class="section-title">Keahlian</h2>
-
-        <div class="experience-info">
-            <div class="grid">
-                <div class="grid-card">
-                    <i class="fa-solid fa-code"></i>
-                    <span>Frontend Engineer</span>
-                    <p>Dalam tahap penguatan dan pengembangan kemampuan</p>
-                </div>
-
-                <div class="grid-card">
-                    <i class="fa-solid fa-pen-nib"></i>
-                    <span>Public Speaking</span>
-                    <p>Regular MC & Moderator, baik didalam maupun diluar acara kampus</p>
-                </div>
-
-                <div class="grid-card">
-                    <i class="fa-solid fa-book"></i>
-                    <span>Writer</span>
-                    <p>Author buku "Dimana Kebenaran Berada?"</p>
-                </div>
-
-                <div class="grid-card">
-                    <i class="fa-solid fa-user-tie"></i>
-                    <span>Leadership</span>
-                    <p>Organisatoris mulai dari jenjang menengah atas</p>
-                </div>
-            </div>
-            <img src="../images/me.jpg" alt="">
-        </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="projects">
-        <h2 class="section-title">Pengalaman</h2>
-
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="../images/Desktop - 1.png" alt="">
-                <h3>Sample Project</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores minima ea ad repudiandae inventore
-                    exercitationem.</p>
-                <div class="btn-group">
-                    <div class="btn">Selengkapnya</div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="../images/Frame 56.png" alt="">
-                <h3>Sample Experience</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores minima ea ad repudiandae inventore
-                    exercitationem.</p>
-                <div class="btn-group">
-                    <div class="btn">Selengkapnya</div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="../images/Frame 57.png" alt="">
-                <h3>Sample Achievment</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores minima ea ad repudiandae inventore
-                    exercitationem.</p>
-                <div class="btn-group">
-                    <div class="btn">Selengkapnya</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-row">
-                <!-- Nama -->
-                <div class="footer-col">
-                    <span class="first_name">Your name is here</span>
-                    <p>Alamat : Kecamatan, Kota, Provinsi, Indonesia </p>
-                </div>
-
-                <!-- Sosial Media -->
-                <div class="footer-col">
-                    <span class="sosmed-title">Sosial Media</span>
-                    <div class="sosmed">
-                        <div class="sosmed-row">
-                            <div class="sosmed-icon">
-                                <a target="_blank" rel="nofollow"
-                                    href="https://www.instagram.com/rifqi_ahzami?igsh=eHgzYzhzMWt0Mm5i">
-                                    <i class="fa-brands fa-linkedin fa-2x"></i>
-                                </a>
+        <!-- Profil -->
+        <section id="profil">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-5">
+                        <div class="profile_picture_2">
+                            <div class="img-wrapper">
+                                <div class="particle-1"></div>
+                                <div class="particle-2"></div>
+                                <div class="particle-3"></div>
+                                <img onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/profil.jpeg" alt="">
                             </div>
-                            <div class="sosmed-icon">
-                                <a target="_blank" rel="nofollow" href="linkedin rifqii">
-                                    <i class="fa-brands fa-instagram fa-2x"></i>
-                                </a>
+                        </div>
+                    </div>
+                    <div class="col-md-7 tentang-saya">
+                        <div class="nama">
+                            <span class="first_name">Rangga</span>
+                            <span class="last_name">Dwi Saputra</span>
+                        </div>
+                        <div class="work">Teknik Informatika</div>
+                        <div class="tentang-saya-text desc-text">
+                            <p>Memadukan rasa ingin tahu dengan semangat Growth & Impact oriented, melihat setiap tantangan sebagai kesempatan untuk tumbuh dan memberi arti. Menjadikan proses sama berharganya dengan hasil.</p>
+                        </div>
+                        <div class="">
+                            <a href="#pengalaman" class="porto-btn-primary section-navigator text-capitalize">Lihat
+                                Portofolio</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Profil End -->
+
+        <!-- Pengalaman -->
+        <section id="pengalaman">
+            <div class="container">
+                <div class="pengalaman-title" data-aos="fade-down">Pengalaman</div>
+                <div class="single-accordion mt-5">
+                    <div class="accordion">
+                        <div class="accordion" id="accordion-pengalaman">
+
+                            <!-- pendidikan -->
+                            <div data-aos="fade-right" data-aos-delay="0" data-section="pendidikan" class="card">
+                                <div class="card-header" id="heading-pendidikan">
+                                    <a class="accordion-item collapsed" href="#collapse-pendidikan"
+                                        data-bs-toggle="collapse" role="button" aria-expanded="false">
+                                        <span class="icon-wrapper">
+                                            <img class="icon"
+                                                src="https://suratplus.com/assets-3/portofolio/icon/togas.svg">
+                                        </span>Pendidikan
+                                    </a>
+                                </div>
+                                <div id="collapse-pendidikan" class="collapse" data-bs-parent="#accordion-pengalaman">
+                                    <div class="card-body">
+                                        <div class="container">
+                                            <div class="row gy-1">
+                                                <div class="col-12 col-md-6">
+                                                    <span class="education_instance">D4 - Teknik Informatika</span><br>
+                                                    <span class="education_org">Politeknik Negeri Malang</span><br>
+                                                    <span class="education_location">Malang</span>,
+                                                    <span class="education_start">2023</span> -
+                                                    <span class="education_end">Sekarang</span>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <div class="desc-text">
+                                                        <p>AAktif dalam kegiatan internal maupun eksternal kampus melalui organisasi, kepanitiaan, serta peran sebagai Master of Ceremony. Berfokus pada pengembangan portofolio dan personal branding melalui pembuatan website profil, manajemen proyek, dan pengelolaan timeline.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row gy-1">
+                                                <div class="col-12 col-md-6">
+                                                    <span class="education_instance">SMA - MIPA</span><br>
+                                                    <span class="education_org">MAN 2 Banyuwangi</span><br>
+                                                    <span class="education_location">Banyuwangi</span>,
+                                                    <span class="education_start">2020</span> -
+                                                    <span class="education_end">2023</span>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <div class="desc-text">
+                                                        <p>Menjadi bagian dari anggota OSIM yang telah berhasil
+                                                            melaksanakan 12 Program selama 1 tahun disamping menjalani
+                                                            masa pendidikan selama 3 tahun.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Organisasi -->
+                            <div data-aos="fade-right" data-aos-delay="200" data-section="organisasi" class="card">
+                                <div class="card-header" id="heading-organisasi">
+                                    <a class="accordion-item collapsed" href="#collapse-organisasi"
+                                        data-bs-toggle="collapse" role="button" aria-expanded="false">
+                                        <span class="icon-wrapper">
+                                            <img class="icon"
+                                                src="https://suratplus.com/assets-3/portofolio/icon/group.svg">
+                                        </span>Organisasi
+                                    </a>
+                                </div>
+                                <div id="collapse-organisasi" class="collapse" data-bs-parent="#accordion-pengalaman">
+                                    <div class="card-body">
+                                        <div class="container">
+
+                                            <!-- ikawangi -->
+                                            <div class="row gy-1 org_item">
+                                                <div class="col-12 col-md-6">
+                                                    <span class="org_instance">IKAWANGI POLINEMA</span>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <span class="org_position">Kepala Bidang Kebudayaan</span><br>
+                                                    <span class="org_location">Malang</span>,
+                                                    <span class="org_start">2024</span> -
+                                                    <span class="org_end">2025</span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="desc-text"></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- HMTI -->
+                                            <div class="row gy-1 org_item">
+                                                <div class="col-12 col-md-6">
+                                                    <span class="org_instance">Himpunan Mahasiswa Teknologi
+                                                        Informasi</span>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <span class="org_position">Staff KOMINFO</span><br>
+                                                    <span class="org_location">Politeknik Negeri Malang</span>,
+                                                    <span class="org_start">2023</span> -
+                                                    <span class="org_end">2024</span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="desc-text"></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- ITDEC -->
+                                            <div class="row gy-1 org_item">
+                                                <div class="col-12 col-md-6">
+                                                    <span class="org_instance">Informatic Technology Department English
+                                                        Community</span>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <span class="org_position">Mentor of Story Telling</span><br>
+                                                    <span class="org_location">Politeknik Negeri Malang</span>,
+                                                    <span class="org_start">2024</span> -
+                                                    <span class="org_end">2025</span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="desc-text"></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Love OSIM -->
+                                            <div class="row gy-1 org_item">
+                                                <div class="col-12 col-md-6">
+                                                    <span class="org_instance">OSMANDAWASNGI 20/21 - 21/22</span>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <span class="org_position">Staff Pendidikan dan
+                                                        Kebudayaan</span><br>
+                                                    <span class="org_location">MAN 2 Banyuwangi</span>,
+                                                    <span class="org_start">2020</span> -
+                                                    <span class="org_end">2022</span>
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="desc-text"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Pengalaman -->
+                            <div class="row gy-5">
+                                <!-- Proyek 2: Public Speaking -->
+                                <div class="col-md-6" data-aos="fade-in">
+                                    <div class="project-card">
+                                        <div class="project-picture-wrapper w-100">
+                                            <img class="project_picture user-generated-img"
+                                                onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                                src="img/ps.jpg" alt="Public Speaking">
+                                        </div>
+                                        <div class="project-text">
+                                            <div class="project_name">Public Speaking</div>
+                                            <div class="project_desc desc-text">
+                                                <p>Regular MC dan moderator selama 3 tahun lebih di berbagai acara, dengan kemampuan menciptakan suasana dinamis, menjaga alur interaktif, serta terbuka untuk pengembangan diri.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a rel="nofollow" data-aos="fade-right" href="image.html"
+                                        class="project_url porto-btn-primary text-capitalize"
+                                        style="text-align: center;">Dokumentasi lain</a>
+                                </div>
+
+                                <!-- Proyek 3: Sertifikat -->
+                                <div class="col-md-6" data-aos="fade-in">
+                                    <div class="project-card">
+                                        <div class="project-picture-wrapper w-100">
+                                            <img class="project_picture user-generated-img"
+                                                onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                                src="img/sertif.jpg" alt="Public Speaking">
+                                        </div>
+                                        <div class="project-text">
+                                            <div class="project_name">Sertifikat</div>
+                                            <div class="project_desc desc-text">
+                                                <p>Sertifikat ini merepresentasikan dedikasi saya dalam pengembangan diri, profesionalisme, serta komitmen untuk terus maju dan berinovasi.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- <a rel="nofollow" data-aos="fade-right" target="_blank"
+                        href="linkpublicSpeaking"
+                        class="project_url porto-btn-primary text-capitalize" style="text-align: center;">Lihat Projek Saya</a> -->
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pengalaman End -->
+
+        <!-- Project -->
+        <section id="projek">
+            <div class="container">
+                <!-- Judul section proyek -->
+                <div class="project-title" data-aos="fade-down">
+                    Projek
+                </div>
+
+                <div class="row gy-5">
+                    <!-- Project 1: Buku -->
+                    <div class="col-md-6" data-aos="fade-in">
+                        <div class="project-card">
+                            <!-- Wrapper untuk gambar proyek -->
+                            <div class="project-picture-wrapper w-100">
+                                <img class="project_picture user-generated-img"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/Postingan 2.jpg" alt="Buku: Dimana Kebenaran Berada?">
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name">
+                                    Buku: Dimana Kebenaran Berada? Entahlah akupun mencarinya
+                                </div>
+                                <div class="project_desc desc-text">
+                                    <p>Buku ini berisi refleksi sederhana tentang pengembangan diri, ditujukan bagi siapa pun yang ingin memaknai ulang langkah hidupnya. Karena setiap perubahan besar selalu berawal dari keputusan kecil untuk melangkah.</p>
+                                </div>
+                                <a rel="nofollow" data-aos="fade-right" target="_blank"
+                                    href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDQzODY4Nzc5ODE2NzU2?story_media_id=3444805780229460063_6827802392&amp;igsh=ZWc3bnlpczIxMzc2"
+                                    class="project_url porto-btn-primary text-capitalize">Lihat Projek Saya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 1: Buku END -->
+
+                    <!-- Project 2:Product Design-->
+                    <div class="col-md-6" data-aos="fade-in">
+                        <div class="project-card">
+                            <!-- Wrapper untuk gambar proyek -->
+                            <div class="project-picture-wrapper w-100">
+                                <img class="project_picture user-generated-img"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/desains.png" alt="Buku: Dimana Kebenaran Berada?">
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name">
+                                    Product Designs' Post
+                                </div>
+                                <div class="project_desc desc-text">
+                                    <p>Fundamental yang saya pelajari membuka jalan untuk terus berkembang dan mencoba berbagai bentuk desain lainnya.Pengalaman mengembangkan project product design menjadi langkah berharga bagi saya.
+                                    </p>
+                                </div>
+                                <a rel="nofollow" data-aos="fade-right" target="_blank"
+                                    href="https://wa.me/6283153248283"
+                                    class="project_url porto-btn-primary text-capitalize">Hubungi saya</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 : Design END -->
+
+                    <!-- Project 3: Website-->
+                    <div class="col-md-6" data-aos="fade-in">
+                        <div class="project-card">
+                            <!-- Wrapper untuk gambar proyek -->
+                            <div class="project-picture-wrapper w-100">
+                                <img class="project_picture user-generated-img"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/webporto.png" alt="Pengembangan Website Portofolio">
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name">
+                                    Pengembangan Website Portofolio
+                                </div>
+                                <div class="project_desc desc-text">
+                                    <p>Seperti website portofolio saya yang sedang anda kunjungi sekarang ini. Saya
+                                        masih dalam tahap belajar untuk berusaha mengembangkan website yang fungsional
+                                        dan lebih baik lagi. Dimulai dari belajar website builder</p>
+
+                                </div>
+                                <!-- <a rel="nofollow" data-aos="fade-right" target="_blank"
+                                    href="https://putra1688.github.io/Learning/myRangga.html"
+                                    class="project_url porto-btn-primary text-capitalize">Kunjungi Website</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 : Design END -->
+                    <!-- Project 4: document-->
+                    <div class="col-md-6" data-aos="fade-in">
+                        <div class="project-card">
+                            <!-- Wrapper untuk gambar proyek -->
+                            <div class="project-picture-wrapper w-100">
+                                <img class="project_picture user-generated-img"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/docs.jpg" alt="Documentation Portofolio">
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name">
+                                    Document Controlling
+                                </div>
+                                <div class="project_desc desc-text">
+                                    <p>
+                                        Pengelolaan dokumen secara rapi, terstruktur, dan akurat. Saya terbiasa
+                                        menggunakan Microsoft Word, Excel, dan Collab untuk menyusun, memformat, serta
+                                        memverifikasi dokumen agar mudah diakses dan dipahami.
+                                    </p>
+
+                                </div>
+                                <a rel="nofollow" data-aos="fade-right" target="_blank"
+                                    href="https://drive.google.com/drive/folders/18rUaDiaVle6UvCd-00S1ALlcVl_c0Vl8"
+                                    class="project_url porto-btn-primary text-capitalize">Kunjungi Drive</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 : Design END -->
+
+                    <!-- Project 4:Comng soon-->
+                    <div class="col-md-6" data-aos="fade-in">
+                        <div class="project-card">
+                            <!-- Wrapper untuk gambar proyek -->
+                            <div class="project-picture-wrapper w-100">
+                                <img class="project_picture user-generated-img"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/coming.webp" alt="coming soon">
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name">
+                                    Another Project
+                                </div>
+                                <div class="project_desc desc-text">
+                                    <p>Fokus saya adalah menghadirkan project dengan kualitas yang semakin optimal, dari segi tampilan hingga fungsionalitas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 : coming soon END -->
+                    <!-- Project 5:Locked-->
+                    <div class="col-md-6" data-aos="fade-in">
+                        <div class="project-card">
+                            <!-- Wrapper untuk gambar proyek -->
+                            <div class="project-picture-wrapper w-100">
+                                <img class="project_picture user-generated-img"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/locked.png" alt="coming soon">
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name">
+                                    Locked
+                                </div>
+                                <div class="project_desc desc-text">
+                                    <p>Hire me to Unlocked my true potential.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 : coming soon END -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill -->
+        <section id="skill">
+            <div class="container">
+                <!-- Judul Bagian Skill -->
+                <div class="skill-title" data-aos="fade-down">
+                    Skill
+                </div>
+
+                <!-- Bagian Soft Skills -->
+                <div class="card-skill" data-aos="flip-down">
+                    <div class="row gy-4">
+                        <!-- Judul Soft Skills -->
+                        <div class="col-12 col-md-3">
+                            <span class="skill-subtitle">Soft Skills</span>
+                        </div>
+                        <!-- Isi Soft Skills -->
+                        <div class="col-12 col-md-9">
+                            <div class="row gy-1 soft_skill">
+                                <div class="col-12 col-md-6 skill-item">Public Speaking</div>
+                                <div class="col-12 col-md-6 skill-item">Master of Ceremony</div>
+                                <div class="col-12 col-md-6 skill-item">Moderator of Event</div>
+                                <div class="col-12 col-md-6 skill-item">Project and Team Management</div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Kontak -->
-                <div class="footer-col">
+                <!-- Bagian Hard Skills -->
+                <div class="card-skill" data-aos="flip-down">
+                    <div class="row gy-4">
+                        <!-- Judul Hard Skills -->
+                        <div class="col-12 col-md-3">
+                            <span class="skill-subtitle">Hard Skills</span>
+                        </div>
+                        <!-- Isi Hard Skills -->
+                        <div class="col-12 col-md-9">
+                            <div class="row gy-1 hard_skill">
+                                <div class="col-12 col-md-6 skill-item">Basic Java</div>
+                                <div class="col-12 col-md-6 skill-item">Basic HTML</div>
+                                <div class="col-12 col-md-6 skill-item">Basic CSS</div>
+                                <div class="col-12 col-md-6 skill-item">English Intermediate Grade</div>
+                                <div class="col-12 col-md-6 skill-item">Spreadsheet</div>
+                                <div class="col-12 col-md-6 skill-item">Email Management</div>
+                                <div class="col-12 col-md-6 skill-item">AI Prompt</div>
+                                <div class="col-12 col-md-6 skill-item">Copywriting</div>
+                                <div class="col-12 col-md-6 skill-item">Ready to Learn</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bagian Software Skills -->
+                <div class="card-skill" data-aos="flip-down">
+                    <div class="row gy-4">
+                        <!-- Judul Software Skills -->
+                        <div class="col-12 col-md-3">
+                            <span class="skill-subtitle">Software Skills</span>
+                        </div>
+                        <!-- Isi Software Skills -->
+                        <div class="col-12 col-md-9">
+                            <div class="row gy-1 hard_skill">
+                                <!-- Figma Skill -->
+                                <div class="col-6 col-md-3 software-skill-item">
+                                    <figure>
+                                        <img class="software_icon"
+                                            src="https://suratplus.com/assets-3/icons/software-icon/Figma.svg"
+                                            onerror="this.onerror=null; this.src='https://suratplus.com/assets-3/portofolio/icon/software/Software.svg';">
+                                        <figcaption>Figma</figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Canva Skill -->
+                                <div class="col-6 col-md-3 software-skill-item">
+                                    <figure>Fpr
+                                        <img class="software_icon"
+                                            src="https://suratplus.com/assets-3/icons/software-icon/Canva.svg"
+                                            onerror="this.onerror=null; this.src='https://suratplus.com/assets-3/portofolio/icon/software/Software.svg';">
+                                        <figcaption>Canva</figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Microsoft Excel Skill -->
+                                <div class="col-6 col-md-3 software-skill-item">
+                                    <figure>
+                                        <img class="software_icon"
+                                            src="https://suratplus.com/assets-3/icons/software-icon/Microsoft Excel.svg"
+                                            onerror="this.onerror=null; this.src='https://suratplus.com/assets-3/portofolio/icon/software/Software.svg';">
+                                        <figcaption>Microsoft Excel</figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Microsoft Word Skill -->
+                                <div class="col-6 col-md-3 software-skill-item">
+                                    <figure>
+                                        <img class="software_icon"
+                                            src="https://suratplus.com/assets-3/icons/software-icon/Microsoft Word.svg"
+                                            onerror="this.onerror=null; this.src='https://suratplus.com/assets-3/portofolio/icon/software/Software.svg';">
+                                        <figcaption>Microsoft Word</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Skill End -->
+
+        <!-- Layanan -->
+        <section id="layanan">
+            <div class="container">
+                <!-- Judul Bagian Layanan -->
+                <div class="layanan-title" data-aos="fade-down">Layanan</div>
+
+                <!-- Baris untuk kartu layanan -->
+                <div class="row g-5 justify-content-center">
+
+                    <!-- Kartu Layanan Virtual Assistance -->
+                    <div class="col-12 col-md-5">
+                        <div class="card-layanan" data-aos="flip-down">
+                            <!-- Ikon layanan -->
+                            <div class="icon-layanan">
+                                <img src="https://suratplus.com/assets-3/portofolio/icon/service.svg" alt="">
+                            </div>
+                            <!-- Nama layanan -->
+                            <div class="service_name">Virtual Assistance</div>
+                            <!-- Tombol untuk detail layanan -->
+                            <div class="text-center">
+                                <a rel="nofollow" target="_blank" href="https://wa.me/6283153248283"
+                                    data-aos="fade-right"
+                                    class="porto-btn-primary service_url text-capitalize">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Layanan Product Design -->
+                    <div class="col-12 col-md-5">
+                        <div class="card-layanan" data-aos="flip-down">
+                            <!-- Ikon layanan -->
+                            <div class="icon-layanan">
+                                <img src="https://suratplus.com/assets-3/portofolio/icon/service.svg" alt="">
+                            </div>
+                            <!-- Nama layanan -->
+                            <div class="service_name">Design</div>
+                            <!-- Tombol untuk detail layanan -->
+                            <div class="text-center">
+                                <a rel="nofollow" target="_blank" href="https://wa.me/6283153248283"
+                                    data-aos="fade-right"
+                                    class="porto-btn-primary service_url text-capitalize">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Layanan Email Management -->
+                    <div class="col-12 col-md-5">
+                        <div class="card-layanan" data-aos="flip-down">
+                            <!-- Ikon layanan -->
+                            <div class="icon-layanan">
+                                <img src="https://suratplus.com/assets-3/portofolio/icon/service.svg" alt="">
+                            </div>
+                            <!-- Nama layanan -->
+                            <div class="service_name">Email Management</div>
+                            <!-- Tombol untuk detail layanan -->
+                            <div class="text-center">
+                                <a rel="nofollow" href="email.html" data-aos="fade-right"
+                                    class="porto-btn-primary service_url text-capitalize">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Layanan Coming Soon -->
+                    <div class="col-12 col-md-5">
+                        <div class="card-layanan" data-aos="flip-down">
+                            <!-- Ikon layanan -->
+                            <div class="icon-layanan">
+                                <img src="https://suratplus.com/assets-3/portofolio/icon/service.svg" alt="">
+                            </div>
+                            <!-- Nama layanan -->
+                            <div class="service_name">Anda butuh apa?</div>
+                            <!-- Tombol untuk detail layanan (tidak aktif untuk sementara) -->
+                            <div class="text-center">
+                                <a rel="nofollow" target="_blank" href="" data-aos="fade-right"
+                                    class="porto-btn-primary service_url text-capitalize">Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- Akhir baris kartu layanan -->
+            </div> <!-- Akhir container -->
+        </section>
+
+        <!-- Under maintenance  -->
+        <section id="perbaikan">
+            <div class="container">
+                <div class="sosmed-title text-capitalize" data-aos="fade-down">Dalam Perbaikan dan Perkembangan</div>
+                <div class="text-center">
+                    <div id="maintenanceMessage"
+                        style="font-size: 50px; color: #333; font-style: italic; font-family: Arial, Helvetica, sans-serif;">
+                        Mohon tunggu sebentar...</div>
+                </div>
+            </div> <!-- Akhir baris ikon sosial media -->
+    </div> <!-- Akhir container -->
+    </section>
+
+
+    <section id="sosmed">
+        <div class="container">
+            <!-- Judul Bagian Sosial Media -->
+            <div class="sosmed-title text-capitalize" data-aos="fade-down">Salam Kenal</div>
+
+            <!-- Baris untuk ikon sosial media -->
+            <div class="row justify-content-center gy-3">
+
+                <!-- Ikon Instagram -->
+                <div class="col-3 col-lg-1 text-center">
+                    <a target="_blank" rel="nofollow"
+                        href="https://www.instagram.com/ranggarangga1688/profilecard/?igsh=YzdiZGZoMXNsdmY2"
+                        data-aos="fade-in" target="_blank">
+                        <div class="sosmed-item">
+                            <img src="https://suratplus.com/assets-3/portofolio/icon/1-Instagram.svg" />
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Ikon LinkedIn -->
+                <div class="col-3 col-lg-1 text-center">
+                    <a target="_blank" rel="nofollow" href="https://www.linkedin.com/in/rangga-dwi-saputra-860743284/"
+                        data-aos="fade-in" target="_blank">
+                        <div class="sosmed-item">
+                            <img src="https://suratplus.com/assets-3/portofolio/icon/1-LinkedIn.svg" />
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Ikon Gihub -->
+                <div class="col-3 col-lg-1 text-center">
+                    <a target="_blank" rel="nofollow" href="https://github.com/Putra1688" data-aos="fade-in"
+                        target="_blank">
+
+                        <div class="sosmed-item">
+                            <img src="img/github-mark.png" width="50" height="50" />
+                        </div>
+                    </a>
+                </div>
+                <!-- Ikon WhatssApp -->
+                <div class="col-3 col-lg-1 text-center">
+                    <a target="_blank" rel="nofollow" href="https://wa.me/6283153248283" data-aos="fade-in"
+                        target="_blank">
+
+                        <div class="sosmed-item">
+                            <img src="img/wa.png" width="50" height="50" />
+                        </div>
+                    </a>
+                </div>
+
+            </div> <!-- Akhir baris ikon sosial media -->
+        </div> <!-- Akhir container -->
+    </section>
+
+
+    <!-- Bagian Footer -->
+    <footer style="background-color: #1f069f;">
+        <div class="container">
+            <div class="row gy-5">
+
+                <!-- Nama di bagian footer -->
+                <div class="col-12 col-md-3">
+                    <span class="first_name">Rangga Dwi Saputra</span>
+                </div>
+
+                <!-- Bagian Sosial Media di Footer -->
+                <div class="col-12 col-md-5">
+                    <span class="sosmed-title">Sosial Media</span>
+                    <div class="footer-sosmed">
+                        <div class="row gy-3">
+
+                            <!-- Ikon Instagram di footer -->
+                            <div class="col-3 col-lg-1">
+                                <a target="_blank" rel="nofollow"
+                                    href="https://www.instagram.com/ranggarangga1688/profilecard/?igsh=YzdiZGZoMXNsdmY2">
+                                    <img src="https://suratplus.com/assets-3/portofolio/icon/1-Instagram.svg" />
+                                </a>
+                            </div>
+
+                            <!-- Ikon LinkedIn di footer -->
+                            <div class="col-3 col-lg-1">
+                                <a target="_blank" rel="nofollow"
+                                    href="https://www.linkedin.com/in/rangga-dwi-saputra-860743284/">
+                                    <img src="https://suratplus.com/assets-3/portofolio/icon/1-LinkedIn.svg" />
+                                </a>
+                            </div>
+
+                        </div> <!-- Akhir row ikon sosmed di footer -->
+                    </div> <!-- Akhir footer-sosmed -->
+                </div>
+
+                <!-- Bagian Kontak di Footer -->
+                <div class="col-12 col-md-4">
                     <span class="kontak-title">Kontak</span>
                     <div class="kontak">
+                        <!-- Email kontak -->
                         <div class="kontak-item email">
-                            <a href="mailto:sibagus1710@gmail.com">youremail@gmail.com</a>
+                            <a href="mailto:ranggadsaputra11@gmail.com" target="_blank">ranggadsaputra11@gmail.com</a>
                         </div>
+                        <!-- Nomor telepon kontak -->
                         <div class="kontak-item phone_number">
-                            <a href="https://wa.me/6281949662102" style="color: white;">0000-0000-0000</a>
-                            <br><br>
-                            <a href=""> &copy;adarangga</a>
+                            <a href="https://wa.me/6283153248283" target="_blank">083153248283</a>
                         </div>
-                    </div>
+                    </div> <!-- Akhir kontak -->
                 </div>
-            </div>
+
+            </div> <!-- Akhir row di footer -->
             <hr>
-        </div>
+        </div> <!-- Akhir container di footer -->
     </footer>
+    </div>
 
 
-    <script src="script.js"></script>
+    <div id="fullscreen-view" class="animate__animated animate__bounce">
+        <img class="close-icon" src="https://suratplus.com/assets-3/portofolio/icon/x-circle-fill.svg" alt="">
+        <img class="image" src="" alt="">
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>const isHasPortofolioSubscription = 0;</script>
+    <script src="https://suratplus.com/assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://suratplus.com/assets-3/portofolio/js/fullscreen-img.js?version=1.0.2"></script>
+    <script src="https://suratplus.com/assets-3/portofolio/js/preview.js?version=1.0.8"></script>
+    <script src="https://suratplus.com/assets-3/js/suratplus-ui-kit.js?version=1.0.1"></script>
+    <script src="https://suratplus.com/assets/js/tiny-slider.js"></script>
+
+    <script>
+        AOS.init();
+
+        let navLinks = document.querySelectorAll('.section-navigator');
+        navLinks.forEach((navLink) => {
+            navLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                navLink.classList.add('active');
+                // remove active sibling
+                navLinks.forEach((navLink) => {
+                    if (navLink !== e.target) {
+                        navLink.classList.remove('active');
+                    }
+                });
+                let target = e.target.getAttribute('href');
+                let targetElement = document.querySelector(target);
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        //======== tiny slider for testimonial-one
+        tns({
+            autoplay: true,
+            autoplayButtonOutput: false,
+            mouseDrag: true,
+            gutter: 0,
+            container: ".testimonial-one-active",
+            center: true,
+            nav: false,
+            controls: false,
+            speed: 400,
+            controlsText: [
+                '<i class="lni lni-arrow-left-circle"></i>',
+                '<i class="lni lni-arrow-right-circle"></i>',
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                },
+
+                992: {
+                    items: 2,
+                },
+                1200: {
+                    items: 3,
+                },
+            },
+        });
+    </script>
+
+    <!-- maintenanceMessage  -->
+    <script>
+        // Array kalimat yang ingin ditampilkan
+        const messages = [
+            "\"Majulah Walau Hanya Selangkah.\"",
+            "\"I wanna see what will happen if i don't give up.\"",
+            "\"العلم نور يهدينا إلى طريق النجاح.\"",
+            "\"Istiqomah itu lebih baik daripada seribu Karomah.\"",
+            "\"Jika kamu tidak sanggup menahan lelahnya belajar, maka kamu harus sanggup menahan perihnya kebodohan.\" - Imam Syafii"
+        ];
+
+        let currentMessageIndex = 0;
+
+        function changeMessage() {
+            const messageElement = document.getElementById('maintenanceMessage');
+            messageElement.textContent = messages[currentMessageIndex];
+            currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+        }
+
+        // Ganti pesan setiap 2 detik
+        setInterval(changeMessage, 2000);
+    </script>
+
+    <script
+        type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "licenseKey": "NRJS-983546ebc5a610d98cb", "applicationID": "995355995", "transactionName": "M11bZkVVX0NWVExRDQoXeFFDXV5eGHZISD4sTE1Ca3deXkNFV1QOAUpKbmdbQ0RYUVdUCwt7VlxDRl5cW1JKeBIWXU9bUkM=", "queueTime": 0, "applicationTime": 76, "atts": "HxpYEA1PTE0=", "errorBeacon": "bam.nr-data.net", "agent": "" }</script>
 </body>
 
 </html>

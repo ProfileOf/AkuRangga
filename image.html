@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Gambar</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .back-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* responsive grid */
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* biar gambar rapi */
+        }
+        .card .description {
+            padding: 15px;
+            text-align: center;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+        #perbaikan {
+            margin-top: 60px;
+            text-align: center;
+        }
+        #maintenanceMessage {
+            font-size: 28px;
+            color: #333;
+            font-style: italic;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <a href="javascript:window.history.back()" class="back-btn">← Kembali</a>
+    <h1>Galeri Gambar</h1>
+    <div class="gallery">
+        <div class="card">
+            <img src="img/ps.jpg" alt="Gambar 1">
+            <div class="description">Solo MC dalam acara JTI Sharing Session <br><br> 8 Oktober 2023</div>
+        </div>
+        <div class="card">
+            <img src="img/ps2.jpg" alt="Gambar 2">
+            <div class="description">Ketua Pelaksana Open Recruitment OSMANDAWASNGI 2022</div>
+        </div>
+        <div class="card">
+            <img src="img/ps5.jpg" alt="Gambar 3">
+            <div class="description">Moderator Sidang Pleno LDKS MAN 2 Banyuwangi 2022</div>
+        </div>
+        <div class="card">
+            <img src="img/ps4.jpg" alt="Gambar 4">
+            <div class="description">Moderator Musyawarah Kerja HMTI 2023</div>
+        </div>
+        <div class="card">
+            <img src="img/ps3.jpg" alt="Gambar 5">
+            <div class="description">Pembacaan Text doa dalam serah terima jabatan HMTI 2023-2024</div>
+        </div>
+        <div class="card">
+            <img src="img/ps6.jpg" alt="Gambar 6">
+            <div class="description">Host Upgrading Workshop Softskill dalam Play IT 2024</div>
+        </div>
+        <div class="card">
+            <img src="img/ps8.jpg" alt="Gambar 7">
+            <div class="description">MC Opening Nasional Event Play IT 2024</div>
+        </div>
+        <div class="card">
+            <img src="img/ps7.jpg" alt="Gambar 8">
+            <div class="description" style="font-style: italic;">Waiting for another experiences</div>
+        </div>
+    </div>
+
+    <section id="perbaikan">
+        <div class="container">
+            <div class="text-center">
+                <div id="maintenanceMessage">
+                    Tampilan Website sedang dalam tahap pembangunan...
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

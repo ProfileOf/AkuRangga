@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Rangga</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .back-btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        h2 {
+            color: #ff5733;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-indent: 50px;
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .content {
+            margin-top: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .content ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .content.show {
+            display: block;
+        }
+    </style>
+    <script>
+        function toggleVisibility(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('show');
+        }
+    </script>
+</head>
+<body>
+
+    <a href="javascript:window.history.back()" class="back-btn">← Kembali</a>
+    <div class="container">
+        <h1>Email Management</h1>
+        <h2>Apakah Anda Berfikir Bahwa Saya Akan Meminta Password Email Anda? Tentu Tidak</h2>
+        <p>Email adalah alat komunikasi penting untuk mengirim informasi dan menerima pemberitahuan. Keamanan akun email sangat krusial; password harus dijaga kerahasiaannya dan tidak boleh dibagikan. Namun, pengoperasian dan pengelolaan email yang baik sangat diperlukan untuk memastikan informasi tetap teratur dan mudah diakses. Disinilah saya akan membantu Anda untuk itu, tanpa perlu mengetahui password Anda. Saya hanya membutuhkan izin hak Grant-Access Anda. Berikut beberapa hal yang bisa saya lakukan untuk membantu mengelola email Anda.</p>
+        
+        <button onclick="toggleVisibility('section-reading')">Reading, Deleting, and Unsubscribing</button>
+        <div id="section-reading" class="content">
+            <ul>
+                <li><b>Reading</b>: membuat laporan setiap pesan masuk yang ingin Anda prioritaskan</li>
+                <li><b>Deleting</b>: mengelola ruang pesan email Anda dengan menghapus pesan-pesan yang tidak diperlukan</li>
+                <li><b>Unsubscribing</b>: Menemukan sumber pesan/pengirim yang tidak lagi Anda perlukan untuk dihentikan mengirim pesan secara berkala</li>
+            </ul>
+        </div>
+        
+        <button onclick="toggleVisibility('section-category')">Category and Label</button>
+        <div id="section-category" class="content">
+            <ul>
+                <li><b>Category</b>: usaha otomatis Google untuk memisahkan pesan sesuai dengan kategorinya</li>
+                <li><b>Label</b>: dikontrol oleh pemilik. Anda bisa membuat folder/label tertentu untuk mengelompokkan pesan</li>
+                <li><b>Three tops</b> (Primary, Social, Promotions) adalah kategori default dari Google</li>
+                <li>Label dapat dibuat oleh pemilik untuk mengelompokkan pesan sesuai filter yang telah dibuat</li>
+            </ul>
+        </div>
+
+        <button onclick="toggleVisibility('section-colors')">Colors in Email</button>
+        <div id="section-colors" class="content">
+            <ul>
+                <li>Menandai pesan prioritas</li>
+                <li>Pergi ke label -> klik label warna pada tiga titik. Pesan di inbox akan memiliki warna label yang berbeda</li>
+            </ul>
+        </div>
+
+        <button onclick="toggleVisibility('section-template')">Create a Template to Reply</button>
+        <div id="section-template" class="content">
+            <ul>
+                <li>Settings -> lihat semua pengaturan</li>
+                <li>Kategori di atas -> Advanced -> Templates -> aktifkan dan simpan perubahan</li>
+            </ul>
+        </div>
+
+        <button onclick="toggleVisibility('section-autoresponder')">Auto Responder</button>
+        <div id="section-autoresponder" class="content">
+            <ul>
+                <li>Fitur dari Gmail yang memungkinkan Anda merespons secara otomatis saat Anda tidak bekerja untuk periode tertentu</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
