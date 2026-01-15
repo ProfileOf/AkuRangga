@@ -1,0 +1,838 @@
+/* 
+====================================================================
+   PORTFOLIO PREMIUM CUSTOM CSS
+   Theme: High-End Glassmorphism, Animated Aurora, Neon Accents
+   Author: Rangga Dwi Saputra (Antigravity Assistant)
+====================================================================
+*/
+
+/* -----------------------------------------------------------------
+   1. VARIABLES & THEME SETUP
+----------------------------------------------------------------- */
+:root {
+    /* Color Palette - Deep Premium Dark */
+    --primary-color: #6366f1;
+    --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    --secondary-color: #a855f7;
+    --accent-color: #06b6d4;
+
+    --bg-dark: #0f172a;
+    --bg-darker: #020617;
+
+    /* Glassmorphism Variables */
+    --bg-card: rgba(15, 23, 42, 0.6);
+    --bg-glass: rgba(15, 23, 42, 0.4);
+    --bg-glass-hover: rgba(15, 23, 42, 0.8);
+
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-highlight: #38bdf8;
+
+    /* Spacing & Layout */
+    --container-width: 1200px;
+    --header-height: 80px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 24px;
+
+    /* Effects */
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 25px rgba(99, 102, 241, 0.4);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+    --glass-border-hover: 1px solid rgba(255, 255, 255, 0.2);
+    --backdrop-blur: blur(16px);
+
+    /* Transitions */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-medium: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* -----------------------------------------------------------------
+   2. KEYFRAMES & ANIMATIONS
+----------------------------------------------------------------- */
+@keyframes aurora {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(99, 102, 241, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
+    }
+}
+
+/* -----------------------------------------------------------------
+   3. RESET & BASE STYLES
+----------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-darker);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+
+    /* Premium Animated Background */
+    background:
+        radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(168, 85, 247, 0.15), transparent 25%),
+        linear-gradient(125deg, #020617 0%, #0f172a 100%);
+    background-size: 200% 200%;
+    animation: aurora 15s ease infinite;
+    min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-darker);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* -----------------------------------------------------------------
+   4. TYPOGRAPHY
+----------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    color: var(--text-main);
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.text-gradient {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-highlight {
+    color: var(--text-highlight) !important;
+}
+
+/* -----------------------------------------------------------------
+   5. LAYOUT UTILITIES
+----------------------------------------------------------------- */
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: 6rem 0;
+    position: relative;
+}
+
+/* -----------------------------------------------------------------
+   6. PREMIUM COMPONENTS
+----------------------------------------------------------------- */
+
+/* 6a. Glass Card - The Core Premium Element */
+.glass-card {
+    background: var(--bg-card);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    border: var(--glass-border);
+    border-radius: var(--border-radius-md);
+    padding: 2rem;
+    transition: var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shine effect on hover */
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.glass-card:hover::before {
+    left: 100%;
+}
+
+.glass-card:hover {
+    transform: translateY(-8px);
+    background: var(--bg-glass-hover);
+    border: var(--glass-border-hover);
+    box-shadow: var(--shadow-glow);
+}
+
+/* 6b. Buttons */
+.porto-btn-primary {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--primary-gradient);
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    cursor: pointer;
+    transition: var(--transition-medium);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.porto-btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+    z-index: -1;
+    border-radius: 50px;
+}
+
+.porto-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.6);
+    color: white;
+}
+
+.porto-btn-primary:hover::after {
+    width: 100%;
+}
+
+/* 6c. Section Titles */
+.section-title {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    letter-spacing: -1px;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-gradient);
+    margin: 15px auto 0;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+/* -----------------------------------------------------------------
+   7. NAVBAR COMPONENTS
+----------------------------------------------------------------- */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition-fast);
+}
+
+.profile:hover img {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
+}
+
+.glass-navbar {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 0;
+    transition: var(--transition-medium);
+}
+
+.glass-navbar.scrolled {
+    background: rgba(2, 6, 23, 0.9);
+    padding: 0.8rem 0;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-brand,
+.first_name {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    color: var(--text-muted) !important;
+    font-weight: 500;
+    margin-left: 1.5rem;
+    position: relative;
+    transition: var(--transition-fast);
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-gradient);
+    transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        margin-top: 1rem;
+        background: rgba(2, 6, 23, 0.95);
+        padding: 1.5rem;
+        border-radius: var(--border-radius-md);
+        border: var(--glass-border);
+    }
+}
+
+/* -----------------------------------------------------------------
+   8. HERO & PROFILE SECTION
+----------------------------------------------------------------- */
+#profil {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: var(--header-height);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glowing orb behind profile */
+#profil::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(50px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.profile_picture_2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.img-wrapper {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 50px rgba(99, 102, 241, 0.4);
+    position: relative;
+    z-index: 2;
+    transition: transform 0.5s ease;
+}
+
+.img-wrapper:hover img {
+    transform: scale(1.02);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Animated Particles */
+.particle-1,
+.particle-2,
+.particle-3 {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.particle-1 {
+    width: 380px;
+    height: 380px;
+    border: 1px dashed rgba(168, 85, 247, 0.3);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: spin-slow 30s linear infinite;
+}
+
+.particle-2 {
+    width: 150px;
+    height: 150px;
+    background: var(--primary-gradient);
+    top: -20px;
+    right: -20px;
+    filter: blur(40px);
+    opacity: 0.6;
+    animation: float 8s ease-in-out infinite;
+}
+
+.particle-3 {
+    width: 200px;
+    height: 200px;
+    background: var(--accent-color);
+    bottom: -30px;
+    left: -30px;
+    opacity: 0.2;
+    filter: blur(60px);
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+.nama {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.nama .last_name {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 30px rgba(99, 102, 241, 0.3));
+}
+
+.work {
+    font-size: 1.5rem;
+    color: var(--text-highlight);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* -----------------------------------------------------------------
+   9. EXPERIENCE (ACCORDION)
+----------------------------------------------------------------- */
+.card {
+    background: var(--bg-card) !important;
+    border: var(--glass-border) !important;
+    border-radius: var(--border-radius-md) !important;
+    backdrop-filter: var(--backdrop-blur);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    color: var(--text-main);
+    transition: var(--transition-medium);
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-5px);
+}
+
+.card-header {
+    background: rgba(255, 255, 255, 0.02) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+    padding: 0;
+}
+
+.accordion-item {
+    padding: 1.25rem 2rem;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--text-main);
+}
+
+.accordion-item:hover {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.03), transparent);
+    color: var(--text-highlight);
+    padding-left: 2.5rem;
+    /* Slide effect */
+}
+
+.accordion-item .icon-wrapper {
+    width: 45px;
+    height: 45px;
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    transition: var(--transition-bounce);
+}
+
+.accordion-item:hover .icon-wrapper {
+    transform: rotate(10deg) scale(1.1);
+    background: var(--primary-gradient);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+.card-body {
+    background: rgba(2, 6, 23, 0.3);
+    padding: 2rem;
+}
+
+.education_instance,
+.org_instance {
+    font-size: 1.25rem;
+    color: var(--text-highlight);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+/* -----------------------------------------------------------------
+   10. PROJECTS SECTION
+----------------------------------------------------------------- */
+.project-card {
+    background: var(--bg-card);
+    border: var(--glass-border);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    transition: var(--transition-medium);
+    height: 100%;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--shadow-md), var(--shadow-glow);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.project-picture-wrapper {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project_picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.project-card:hover .project_picture {
+    transform: scale(1.15);
+}
+
+/* Overlay gradient on image */
+.project-picture-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(2, 6, 23, 0.8), transparent);
+    opacity: 0.6;
+}
+
+.project-text {
+    padding: 2rem;
+}
+
+.project_name {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* -----------------------------------------------------------------
+   11. SKILLS SECTION
+----------------------------------------------------------------- */
+.card-skill {
+    background: var(--bg-card);
+    border: var(--glass-border);
+    border-radius: var(--border-radius-lg);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    transition: var(--transition-medium);
+}
+
+.card-skill:hover {
+    background: var(--bg-glass-hover);
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+}
+
+.skill-subtitle {
+    font-size: 1.75rem;
+    color: var(--text-highlight);
+    border-left: 5px solid var(--secondary-color);
+    padding-left: 1.5rem;
+    text-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+}
+
+.skill-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-fast);
+    cursor: default;
+}
+
+.skill-item:hover {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.software-skill-item figure {
+    padding: 1.5rem;
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-medium);
+}
+
+.software-skill-item:hover figure {
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateY(-5px);
+}
+
+.software_icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+/* -----------------------------------------------------------------
+   12. SERVICES
+----------------------------------------------------------------- */
+.card-layanan {
+    background: var(--bg-card);
+    border: var(--glass-border);
+    border-radius: var(--border-radius-lg);
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: var(--transition-medium);
+    overflow: hidden;
+}
+
+.card-layanan:hover {
+    transform: translateY(-15px);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.2);
+}
+
+.icon-layanan {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-bounce);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-layanan:hover .icon-layanan {
+    background: var(--primary-gradient);
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.5);
+    border-color: transparent;
+}
+
+.icon-layanan i {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.service_name {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-main);
+}
+
+/* -----------------------------------------------------------------
+   13. FOOTER
+----------------------------------------------------------------- */
+footer {
+    background: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 5rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.sosmed-item {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    /* Squircle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    transition: var(--transition-bounce);
+}
+
+.sosmed-item:hover {
+    background: var(--primary-gradient);
+    color: white;
+    transform: translateY(-8px) rotate(10deg);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.4);
+    border-color: transparent;
+}
+
+/* -----------------------------------------------------------------
+   14. MAINTENANCE MESSAGE (Quotes)
+----------------------------------------------------------------- */
+#maintenanceMessage {
+    color: #ffffff !important;
+    font-weight: 500;
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.8), 0 0 20px rgba(99, 102, 241, 0.6);
+    transition: var(--transition-medium);
+    min-height: 3rem;
+    font-style: italic;
+    opacity: 0.95;
+    font-size: 1.1rem;
+}
+
+#maintenanceMessage:hover {
+    text-shadow: 0 0 15px rgba(6, 182, 212, 1), 0 0 30px rgba(99, 102, 241, 0.8);
+    transform: scale(1.02);
+}
