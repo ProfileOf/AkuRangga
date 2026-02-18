@@ -829,10 +829,57 @@ footer {
     min-height: 3rem;
     font-style: italic;
     opacity: 0.95;
-    font-size: 1.1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Preserving from inline style */
+    font-size: 3rem;
+    /* Approx 50px for desktop */
 }
 
 #maintenanceMessage:hover {
     text-shadow: 0 0 15px rgba(6, 182, 212, 1), 0 0 30px rgba(99, 102, 241, 0.8);
     transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+
+    /* Maintenance Section - Mobile */
+    #perbaikan .section-title {
+        font-size: 1.8rem;
+    }
+
+    #maintenanceMessage {
+        font-size: 1.2rem;
+        min-height: auto;
+    }
+
+    /* Layanan Section - Mobile 2 Columns */
+    /* Adjusting gap for smaller screens if needed */
+    #layanan .row.g-5 {
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: 1.5rem;
+    }
+
+    .card-layanan {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .icon-layanan {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0.5rem;
+    }
+
+    .icon-layanan i {
+        font-size: 1.2rem;
+    }
+
+    .service_name {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .porto-btn-primary.service_url {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
 }
