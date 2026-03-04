@@ -261,11 +261,12 @@ section {
 /* 6b. Buttons */
 .porto-btn-primary {
     display: inline-block;
-    padding: 0.8rem 2rem;
+    padding: 0.5rem 1.25rem;
     background: var(--primary-gradient);
     color: white;
     font-weight: 600;
-    border-radius: 50px;
+    font-size: 0.9rem;
+    border-radius: var(--border-radius-sm);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
     cursor: pointer;
@@ -657,7 +658,6 @@ section {
     width: 100%;
     height: 50%;
     background: linear-gradient(to top, rgba(2, 6, 23, 0.8), transparent);
-    opacity: 0.6;
 }
 
 .project-text {
@@ -715,6 +715,26 @@ section {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     color: white;
+}
+
+.tag-skill {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius-sm);
+    color: var(--text-highlight);
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    cursor: default;
+    transition: var(--transition-fast);
+}
+
+.tag-skill:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .software-skill-item figure {
