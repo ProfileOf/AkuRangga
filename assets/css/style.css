@@ -404,6 +404,29 @@ section {
     width: 100%;
 }
 
+/* Mobile Toggle Customization */
+.navbar-toggler {
+    border: none !important;
+    padding: 0.5rem;
+    transition: var(--transition-medium);
+    outline: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+    /* Makes the default dark Bootstrap icon white and adds a subtle glow */
+    filter: brightness(0) invert(1) drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
+    transition: var(--transition-fast);
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    transform: scale(1.1);
+    filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
 @media (max-width: 991px) {
     .navbar-collapse {
         margin-top: 1rem;
