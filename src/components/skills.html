@@ -6,122 +6,138 @@
                     Skill
                 </div>
 
-                <!-- Bagian Soft Skills -->
-                <div class="card-skill" data-aos="flip-down">
-                    <div class="row gy-4">
-                        <!-- Judul Soft Skills -->
-                        <div class="col-12 col-md-3">
-                            <span class="skill-subtitle">Soft Skills</span>
-                        </div>
-                        <!-- Isi Soft Skills -->
-                        <div class="col-12 col-md-9">
-                            <div class="row g-3 soft_skill">
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">Public Speaking</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">Master of Ceremony</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">Moderator of Event</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">Project and Team Management</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div class="skills-accordion-wrapper" id="skillsAccordion">
 
-                <!-- Bagian Hard Skills -->
-                <div class="card-skill" data-aos="flip-down">
-                    <div class="row gy-4">
-                        <!-- Judul Hard Skills -->
-                        <div class="col-12 col-md-3">
-                            <span class="skill-subtitle">Hard Skills</span>
-                        </div>
-                        <!-- Isi Hard Skills -->
-                        <div class="col-12 col-md-9">
-                            <div class="row g-2 hard_skill">
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">React</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">Vue</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">Flutter</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">Kotlin Entry Level</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">Notion Entry Level</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">English Intermediate Grade</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">Spreadsheet</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">Email Management</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">AI Prompt</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">Copywriting</div>
-                                </div>
-                                <div class="col-12 col-md-6">
-                                    <div class="skill-item">Ready to Learn</div>
+                    <!-- Bagian Soft Skills -->
+                    <div class="card-skill" data-aos="flip-down">
+                        <div class="row gy-3 align-items-center">
+                            <!-- Judul Soft Skills -->
+                            <div class="col-12 col-md-3">
+                                <button class="skills-toggle-btn w-100 text-start border-0 bg-transparent p-0 d-flex justify-content-between align-items-center" 
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse-soft-skills" aria-expanded="false">
+                                    <span class="skill-subtitle">Soft Skills</span>
+                                    <i class="fa-solid fa-chevron-down d-md-none skills-chevron"></i>
+                                </button>
+                            </div>
+                            <!-- Isi Soft Skills -->
+                            <div id="collapse-soft-skills" class="col-12 col-md-9 collapse show-desktop" data-bs-parent="#skillsAccordion">
+                                <div class="row g-3 soft_skill mt-2 mt-md-0">
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">Public Speaking</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">Master of Ceremony</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">Moderator of Event</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">Project and Team Management</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Bagian Software Skills -->
-                <div class="card-skill" data-aos="flip-down">
-                    <div class="row gy-4">
-                        <!-- Judul Software Skills -->
-                        <div class="col-12 col-md-3">
-                            <span class="skill-subtitle">Software Skills</span>
-                        </div>
-                        <!-- Isi Software Skills -->
-                        <div class="col-12 col-md-9">
-                            <div class="row gy-1 hard_skill">
-                                <!-- Figma Skill -->
-                                <div class="col-6 col-md-3 software-skill-item">
-                                    <figure>
-                                        <i class="fa-brands fa-figma software_icon"></i>
-                                        <figcaption>Figma</figcaption>
-                                    </figure>
-                                </div>
-                                <!-- Canva Skill -->
-                                <div class="col-6 col-md-3 software-skill-item">
-                                    <figure>
-                                        <i class="fa-solid fa-palette software_icon"></i>
-                                        <figcaption>Canva</figcaption>
-                                    </figure>
-                                </div>
-                                <!-- Microsoft Excel Skill -->
-                                <div class="col-6 col-md-3 software-skill-item">
-                                    <figure>
-                                        <i class="fa-solid fa-file-excel software_icon"></i>
-                                        <figcaption>Microsoft Excel</figcaption>
-                                    </figure>
-                                </div>
-                                <!-- Microsoft Word Skill -->
-                                <div class="col-6 col-md-3 software-skill-item">
-                                    <figure>
-                                        <i class="fa-solid fa-file-word software_icon"></i>
-                                        <figcaption>Microsoft Word</figcaption>
-                                    </figure>
+                    <!-- Bagian Hard Skills -->
+                    <div class="card-skill" data-aos="flip-down">
+                        <div class="row gy-3 align-items-center">
+                            <!-- Judul Hard Skills -->
+                            <div class="col-12 col-md-3">
+                                <button class="skills-toggle-btn w-100 text-start border-0 bg-transparent p-0 d-flex justify-content-between align-items-center" 
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse-hard-skills" aria-expanded="false">
+                                    <span class="skill-subtitle">Hard Skills</span>
+                                    <i class="fa-solid fa-chevron-down d-md-none skills-chevron"></i>
+                                </button>
+                            </div>
+                            <!-- Isi Hard Skills -->
+                            <div id="collapse-hard-skills" class="col-12 col-md-9 collapse show-desktop" data-bs-parent="#skillsAccordion">
+                                <div class="row g-2 hard_skill mt-2 mt-md-0">
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">React</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">Vue</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">Flutter</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">Kotlin Entry Level</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">Notion Entry Level</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">English Intermediate Grade</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">Spreadsheet</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">Email Management</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">AI Prompt</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">Copywriting</div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="skill-item">Ready to Learn</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Bagian Software Skills -->
+                    <div class="card-skill" data-aos="flip-down">
+                        <div class="row gy-3 align-items-center">
+                            <!-- Judul Software Skills -->
+                            <div class="col-12 col-md-3">
+                                <button class="skills-toggle-btn w-100 text-start border-0 bg-transparent p-0 d-flex justify-content-between align-items-center" 
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapse-software-skills" aria-expanded="false">
+                                    <span class="skill-subtitle">Software Skills</span>
+                                    <i class="fa-solid fa-chevron-down d-md-none skills-chevron"></i>
+                                </button>
+                            </div>
+                            <!-- Isi Software Skills -->
+                            <div id="collapse-software-skills" class="col-12 col-md-9 collapse show-desktop" data-bs-parent="#skillsAccordion">
+                                <div class="row gy-1 hard_skill mt-2 mt-md-0">
+                                    <!-- Figma Skill -->
+                                    <div class="col-6 col-md-3 software-skill-item">
+                                        <figure>
+                                            <i class="fa-brands fa-figma software_icon"></i>
+                                            <figcaption>Figma</figcaption>
+                                        </figure>
+                                    </div>
+                                    <!-- Canva Skill -->
+                                    <div class="col-6 col-md-3 software-skill-item">
+                                        <figure>
+                                            <i class="fa-solid fa-palette software_icon"></i>
+                                            <figcaption>Canva</figcaption>
+                                        </figure>
+                                    </div>
+                                    <!-- Microsoft Excel Skill -->
+                                    <div class="col-6 col-md-3 software-skill-item">
+                                        <figure>
+                                            <i class="fa-solid fa-file-excel software_icon"></i>
+                                            <figcaption>Microsoft Excel</figcaption>
+                                        </figure>
+                                    </div>
+                                    <!-- Microsoft Word Skill -->
+                                    <div class="col-6 col-md-3 software-skill-item">
+                                        <figure>
+                                            <i class="fa-solid fa-file-word software_icon"></i>
+                                            <figcaption>Microsoft Word</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

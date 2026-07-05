@@ -1087,4 +1087,34 @@ footer {
         width: 310px !important;
         height: 310px !important;
     }
+
+    /* Skills Accordion Mobile Viewport Overrides */
+    .skills-toggle-btn {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+
+    .skills-toggle-btn[aria-expanded="true"] .skills-chevron {
+        transform: rotate(180deg);
+        color: var(--text-highlight);
+    }
+
+    .skills-chevron {
+        transition: transform var(--transition-fast);
+        color: var(--text-muted);
+        font-size: 1.10rem;
+    }
+}
+
+/* Skills Toggle Button Desktop Reset */
+.skills-toggle-btn {
+    pointer-events: none;
+    outline: none;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    .show-desktop {
+        display: block !important;
+    }
 }
