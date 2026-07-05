@@ -116,6 +116,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
@@ -444,7 +445,8 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding-top: var(--header-height);
+    padding-top: calc(var(--header-height) + 60px);
+    padding-bottom: 60px;
     position: relative;
     overflow: hidden;
 }
@@ -462,6 +464,61 @@ section {
     filter: blur(50px);
     z-index: 0;
     pointer-events: none;
+}
+
+/* Open to Work Badge */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.35rem 0.85rem;
+    border-radius: 50px;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-fast);
+}
+
+.status-badge:hover {
+    border-color: rgba(34, 197, 94, 0.4);
+    box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);
+    background: rgba(34, 197, 94, 0.05);
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 8px #22c55e;
+    animation: pulseDot 2s infinite;
+}
+
+.badge-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@keyframes pulseDot {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+    }
 }
 
 .profile_picture_2 {
@@ -924,5 +981,110 @@ footer {
     .porto-btn-primary.service_url {
         padding: 0.4rem 0.8rem;
         font-size: 0.7rem;
+    }
+}
+
+/* -----------------------------------------------------------------
+   15. KEY METRICS COUNTER (SINGLE CARD)
+----------------------------------------------------------------- */
+.key-metrics {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.metrics-container {
+    padding: 1.25rem 2rem !important;
+    border-radius: var(--border-radius-md) !important;
+    background: rgba(15, 23, 42, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    transition: var(--transition-medium) !important;
+}
+
+.metrics-container:hover {
+    background: rgba(15, 23, 42, 0.6) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.15) !important;
+    transform: translateY(-4px);
+}
+
+.metric-item {
+    flex: 1;
+    min-width: 100px;
+    padding: 0.5rem;
+}
+
+.metric-divider {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.metric-icon {
+    font-size: 1.25rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.25rem;
+    filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.3));
+}
+
+.metric-number {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 0.15rem;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.metric-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .metrics-container {
+        padding: 1rem 0.5rem !important;
+    }
+    
+    .metric-item {
+        min-width: 70px;
+        padding: 0.25rem;
+    }
+
+    .metric-divider {
+        height: 35px;
+    }
+
+    .metric-icon {
+        font-size: 1rem;
+        margin-bottom: 0.1rem;
+    }
+
+    .metric-number {
+        font-size: 1.15rem;
+    }
+
+    .metric-label {
+        font-size: 0.55rem;
+        letter-spacing: 0px;
+        line-height: 1.1;
+    }
+
+    /* Profile Sizing for Mobile */
+    .img-wrapper {
+        width: 260px !important;
+        height: 260px !important;
+    }
+
+    .particle-1 {
+        width: 310px !important;
+        height: 310px !important;
     }
 }
