@@ -1,0 +1,357 @@
+<!-- Bismillahirrahmanirrahiim -->
+<!DOCTYPE html>
+<html lang="en" notranslate="true">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="CpSrUtgv1nbOY7fB6PenHz4N32WsbvWNNL083k3p">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/certif_style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/profil.jpeg" type="image/x-icon" />
+    <style>
+        .portofolio {
+            margin-bottom: 4rem;
+        }
+
+        .round-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        /* Filter styling */
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 3.5rem;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            padding: 0.6rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all var(--transition-fast);
+            cursor: pointer;
+        }
+
+        .filter-btn:hover {
+            border-color: rgba(99, 102, 241, 0.4);
+            color: #fff;
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .filter-btn.active {
+            background: var(--primary-gradient);
+            border-color: transparent;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+        }
+
+        #projects-section {
+            padding-top: calc(var(--header-height) + 50px);
+            min-height: 80vh;
+        }
+
+        .project-grid-item {
+            transition: all 0.4s ease;
+        }
+    </style>
+
+    <meta property="og:image">
+    <meta property="og:title" content="Semua Proyek - Rangga Dwi Saputra">
+    <meta property="og:type" content="website">
+
+    <title>Semua Proyek - Rangga Dwi Saputra</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                     new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NJTWDPN5');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P05WXML3TG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-P05WXML3TG');
+    </script>
+</head>
+
+<body>
+    <div class="portofolio portofolio-2">
+
+        <!-- @include components/navbar.html -->
+
+        <!-- Main Projects Grid Section -->
+        <section id="projects-section">
+            <div class="container">
+                <div class="section-title text-center mb-5" data-aos="fade-down">
+                    Daftar Proyek & Karya
+                </div>
+
+                <!-- Category Filters -->
+                <div class="filter-container" data-aos="fade-up" data-aos-delay="100">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="web">Website</button>
+                    <button class="filter-btn" data-filter="aplikasi">Aplikasi</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="row gy-4 px-2" id="projects-grid">
+                    
+                    <!-- Proyek 1: Pengembangan Website Portofolio -->
+                    <div class="col-12 col-md-6 col-lg-4 project-grid-item" data-category="web" data-aos="fade-up">
+                        <div class="project-card h-100">
+                            <div class="project-picture-wrapper w-100" style="height: 200px;">
+                                <img class="project_picture user-generated-img"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/webporto.png" alt="Pengembangan Website Portofolio">
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name" style="font-size: 1.25rem;">Pengembangan Website Portofolio</div>
+                                <div class="project_desc desc-text" style="font-size: 0.85rem;">
+                                    <p>Jasa pembuatan website portofolio & branding digital untuk membantu kalangan profesional tampil memikat di dunia digital.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap pb-4 px-3 mt-auto">
+                                <a target="_blank" href="https://www.instagram.com/addaready"
+                                    class="project_url porto-btn-primary text-capitalize flex-fill text-center btn-sm-app">Kunjungi Bisnis</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 2: ToDo-LiSSSS -->
+                    <div class="col-12 col-md-6 col-lg-4 project-grid-item" data-category="aplikasi" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-card h-100">
+                            <div class="project-picture-wrapper w-100" style="height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(15, 23, 42, 0.4);">
+                                <i class="fa-solid fa-mobile-screen-button text-primary" style="font-size: 4rem; filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.4));"></i>
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name" style="font-size: 1.25rem;">ToDo-LiSSSS</div>
+                                <div class="project_desc desc-text" style="font-size: 0.85rem;">
+                                    <p>Aplikasi daftar tugas harian (Flutter Native) fokus pada efisiensi Local State Management (setState) serta Data Persistence shared_preferences.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap pb-4 px-3 mt-auto">
+                                <span class="tag-skill">#Flutter</span>
+                                <span class="tag-skill">#StateManagement</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 3: Lil Notebook -->
+                    <div class="col-12 col-md-6 col-lg-4 project-grid-item" data-category="aplikasi" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-card h-100">
+                            <div class="project-picture-wrapper w-100" style="height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(15, 23, 42, 0.4);">
+                                <i class="fa-solid fa-note-sticky text-info" style="font-size: 4rem; filter: drop-shadow(0 0 15px rgba(14, 165, 233, 0.4));"></i>
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name" style="font-size: 1.25rem;">Lil Notebook</div>
+                                <div class="project_desc desc-text" style="font-size: 0.85rem;">
+                                    <p>Aplikasi manajemen ide personal dengan efisiensi State Management menggunakan teknik InheritedWidget & ValueNotifier di Flutter.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap pb-4 px-3 mt-auto">
+                                <span class="tag-skill">#Flutter</span>
+                                <span class="tag-skill">#ValueNotifier</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 4: Help & Tech -->
+                    <div class="col-12 col-md-6 col-lg-4 project-grid-item" data-category="web" data-aos="fade-up">
+                        <div class="project-card h-100">
+                            <div class="project-picture-wrapper w-100" style="height: 200px;">
+                                <img class="project_picture user-generated-img"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/helptech.png" alt="Help & Tech">
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name" style="font-size: 1.25rem;">Help & Tech</div>
+                                <div class="project_desc desc-text" style="font-size: 0.85rem;">
+                                    <p>Sosial media berisi konten edukasi teknologi untuk meningkatkan kualitas pengalaman pengguna di platform front-end & mobile.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap pb-4 px-3 mt-auto">
+                                <a target="_blank" href="https://www.tiktok.com/@ranggad.s.id"
+                                    class="project_url porto-btn-primary text-capitalize flex-fill text-center btn-sm-app">Kunjungi Ruang</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 5: Lynk.id -->
+                    <div class="col-12 col-md-6 col-lg-4 project-grid-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-card h-100">
+                            <div class="project-picture-wrapper w-100" style="height: 200px;">
+                                <img class="project_picture user-generated-img"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/lynkid.png" alt="Lynk.id">
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name" style="font-size: 1.25rem;">Lynk.id</div>
+                                <div class="project_desc desc-text" style="font-size: 0.85rem;">
+                                    <p>Platform digital terintegrasi untuk memudahkan pengguna dalam mengelola, mempromosikan, dan berbagi produk digital secara efisien.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap pb-4 px-3 mt-auto">
+                                <a target="_blank" href="https://lynk.id/adarangga"
+                                    class="project_url porto-btn-primary text-capitalize flex-fill text-center btn-sm-app">Kunjungi Toko</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 6: Buku -->
+                    <div class="col-12 col-md-6 col-lg-4 project-grid-item" data-category="lainnya" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-card h-100">
+                            <div class="project-picture-wrapper w-100" style="height: 200px;">
+                                <img class="project_picture user-generated-img"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/Postingan 2.jpg" alt="Buku: Dimana Kebenaran Berada?">
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name" style="font-size: 1.25rem;">Buku: Dimana Kebenaran Berada?</div>
+                                <div class="project_desc desc-text" style="font-size: 0.85rem;">
+                                    <p>Buku refleksi personal tentang perjalanan pencarian jati diri dan pemaknaan ulang langkah kehidupan.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap pb-4 px-3 mt-auto">
+                                <a target="_blank" href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDQzODY4Nzc5ODE2NzU2?story_media_id=3444805780229460063_6827802392&amp;igsh=ZWc3bnlpczIxMzc2"
+                                    class="project_url porto-btn-primary text-capitalize flex-fill text-center btn-sm-app">Detail Buku</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 7: Product Design -->
+                    <div class="col-12 col-md-6 col-lg-4 project-grid-item" data-category="lainnya" data-aos="fade-up">
+                        <div class="project-card h-100">
+                            <div class="project-picture-wrapper w-100" style="height: 200px;">
+                                <img class="project_picture user-generated-img"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/desains.png" alt="Product Designs">
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name" style="font-size: 1.25rem;">Product Designs' Post</div>
+                                <div class="project_desc desc-text" style="font-size: 0.85rem;">
+                                    <p>Portofolio desain postingan produk digital, UI/UX, dan branding visual kreatif.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap pb-4 px-3 mt-auto">
+                                <a href="https://wa.me/6283153248283" target="_blank"
+                                    class="project_url porto-btn-primary text-capitalize flex-fill text-center btn-sm-app">Hubungi</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyek 8: Document Control -->
+                    <div class="col-12 col-md-6 col-lg-4 project-grid-item" data-category="lainnya" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-card h-100">
+                            <div class="project-picture-wrapper w-100" style="height: 200px;">
+                                <img class="project_picture user-generated-img"
+                                    onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                    src="img/docs.jpg" alt="Documentation Control">
+                            </div>
+                            <div class="project-text">
+                                <div class="project_name" style="font-size: 1.25rem;">Document & Data Controling</div>
+                                <div class="project_desc desc-text" style="font-size: 0.85rem;">
+                                    <p>Sistem pengorganisasian dokumen, audit data, dan kolaborasi online secara profesional dan andal.</p>
+                                </div>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap pb-4 px-3 mt-auto">
+                                <a target="_blank" href="https://drive.google.com/drive/folders/18rUaDiaVle6UvCd-00S1ALlcVl_c0Vl8"
+                                    class="project_url porto-btn-primary text-capitalize flex-fill text-center btn-sm-app">Kunjungi Drive</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- @include components/footer.html -->
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Set active link in navbar dynamically
+        const currentPath = window.location.pathname;
+        if (currentPath.includes('projects.html')) {
+            document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href === 'projects.html') {
+                    link.classList.add('active');
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+        }
+
+        // JS Filter Logic
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-grid-item');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Change active button
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-filter');
+
+                projectItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+
+                    if (filterValue === 'all') {
+                        item.classList.remove('d-none');
+                    } else if (category === filterValue) {
+                        item.classList.remove('d-none');
+                    } else {
+                        item.classList.add('d-none');
+                    }
+                });
+
+                // Refresh AOS animations for visible items
+                AOS.refresh();
+            });
+        });
+    </script>
+</body>
+</html>

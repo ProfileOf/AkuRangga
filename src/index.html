@@ -108,25 +108,100 @@
         let navLinks = document.querySelectorAll('.section-navigator');
         navLinks.forEach((navLink) => {
             navLink.addEventListener('click', (e) => {
-                e.preventDefault();
-                navLink.classList.add('active');
-                // remove active sibling
-                navLinks.forEach((navLink) => {
-                    if (navLink !== e.target) {
-                        navLink.classList.remove('active');
+                let href = navLink.getAttribute('href');
+                let hash = href.includes('#') ? href.substring(href.indexOf('#')) : null;
+                if (hash) {
+                    let targetElement = document.querySelector(hash);
+                    if (targetElement) {
+                        e.preventDefault();
+                        navLink.classList.add('active');
+                        // remove active sibling
+                        navLinks.forEach((otherLink) => {
+                            if (otherLink !== navLink) {
+                                otherLink.classList.remove('active');
+                            }
+                        });
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
                     }
-                });
-                let target = e.target.getAttribute('href');
-                let targetElement = document.querySelector(target);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
                 }
             });
         });
 
-
+        // Custom 3-Card Centered Slider
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('projectsSliderTrack');
+            if (!track) return; // Prevent errors on pages without the slider
+            
+            const slides = Array.from(track.children);
+            const nextBtn = document.getElementById('slideNextBtn');
+            const prevBtn = document.getElementById('slidePrevBtn');
+            const indicatorsContainer = document.getElementById('sliderIndicators');
+            
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+            
+            // Create indicator dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.classList.add('indicator-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(dot);
+            });
+            
+            const dots = Array.from(indicatorsContainer.children);
+            
+            function updateSlider() {
+                const isMobile = window.innerWidth <= 768;
+                const isTablet = window.innerWidth <= 991 && window.innerWidth > 768;
+                
+                // Card width factors matching CSS
+                let cardPercentWidth = 60; // Desktop
+                if (isMobile) cardPercentWidth = 100;
+                else if (isTablet) cardPercentWidth = 80;
+                
+                // To center the active index:
+                const offsetAdjustment = (100 - cardPercentWidth) / 2;
+                
+                // Track transition position
+                const translatePercentage = -(currentIndex * cardPercentWidth) + offsetAdjustment;
+                track.style.transform = `translateX(${translatePercentage}%)`;
+                
+                // Update classes
+                slides.forEach((slide, index) => {
+                    slide.classList.remove('active-slide');
+                    dots[index].classList.remove('active');
+                    
+                    if (index === currentIndex) {
+                        slide.classList.add('active-slide');
+                        dots[index].classList.add('active');
+                    }
+                });
+            }
+            
+            function goToSlide(index) {
+                currentIndex = index;
+                updateSlider();
+            }
+            
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateSlider();
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateSlider();
+            });
+            
+            // Re-align on resize
+            window.addEventListener('resize', updateSlider);
+            
+            // Init
+            updateSlider();
+        });
     </script>
 
     <!-- maintenanceMessage  -->
