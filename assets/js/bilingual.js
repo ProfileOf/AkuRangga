@@ -104,9 +104,17 @@ const DICTIONARY = {
     'maint_subtitle': { id: 'Mohon tunggu sebentar...', en: 'Please wait a moment...' }
 };
 
-// Get current active language ('id' or 'en')
+// Get current active language ('id' or 'en') with auto-detection of browser language
 function getActiveLanguage() {
-    return localStorage.getItem(LANG_KEY) || 'id';
+    let savedLang = localStorage.getItem(LANG_KEY);
+    if (!savedLang) {
+        // Detect browser language
+        const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        // If the browser language starts with 'id', use Indonesian. Otherwise, default to English.
+        savedLang = browserLang.startsWith('id') ? 'id' : 'en';
+        localStorage.setItem(LANG_KEY, savedLang);
+    }
+    return savedLang;
 }
 
 // Toggle language state and refresh page UI
