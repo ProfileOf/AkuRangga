@@ -77,9 +77,28 @@
         }
     </style>
 
-    <meta property="og:image">
-    <meta property="og:title" content="Semua Proyek - Rangga Dwi Saputra">
+    <meta name="description" content="Koleksi lengkap proyek portofolio Rangga Dwi Saputra - Full-stack Web & Mobile Developer.">
+    <meta name="keywords" content="Rangga Dwi Saputra, web developer, mobile developer, flutter developer, backend developer, frontend developer, jasa website, proyek portofolio">
+    <meta property="og:image" content="img/pp.png">
+    <meta property="og:title" content="Koleksi Projek - Rangga Dwi Saputra">
+    <meta property="og:description" content="Semua proyek pengembangan web dan aplikasi mobile yang disinkronkan secara live dari Google Sheets.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://byrangga.netlify.app/projects.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Koleksi Projek - Rangga Dwi Saputra">
+    <meta name="twitter:description" content="Semua proyek pengembangan web dan aplikasi mobile yang disinkronkan secara live.">
+    <meta name="twitter:image" content="img/pp.png">
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemPage",
+      "name": "Koleksi Projek - Rangga Dwi Saputra",
+      "description": "Portfolio Projects list dynamically synced from Google Sheets.",
+      "url": "https://byrangga.netlify.app/projects.html"
+    }
+    </script>
 
     <title>Semua Proyek - Rangga Dwi Saputra</title>
 
@@ -114,15 +133,15 @@
         <!-- Main Projects Grid Section -->
         <section id="projects-section">
             <div class="container">
-                <div class="section-title text-center mb-5" data-aos="fade-down">
+                <h1 class="section-title text-center mb-5" data-aos="fade-down" data-translate="projects_page_title">
                     Daftar Proyek & Karya
-                </div>
+                </h1>
 
                 <!-- Category Filters -->
                 <div class="filter-container" data-aos="fade-up" data-aos-delay="100">
-                    <button class="filter-btn active" data-filter="all">Semua</button>
-                    <button class="filter-btn" data-filter="web">Website</button>
-                    <button class="filter-btn" data-filter="aplikasi">Aplikasi</button>
+                    <button class="filter-btn active" data-filter="all" data-translate="filter_all">Semua</button>
+                    <button class="filter-btn" data-filter="web" data-translate="filter_web">Website</button>
+                    <button class="filter-btn" data-filter="aplikasi" data-translate="filter_app">Aplikasi</button>
                 </div>
 
                 <!-- Projects Grid -->
@@ -143,6 +162,7 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/bilingual.js"></script>
     <script src="assets/js/sheet-sync.js"></script>
     <script>
         AOS.init();

@@ -1448,3 +1448,40 @@ footer {
         height: 95px !important;
     }
 }
+
+/* Language Toggle Button styling */
+.lang-toggle-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    color: var(--text-main);
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.lang-toggle-btn:hover {
+    background: rgba(99, 102, 241, 0.15);
+    border-color: rgba(99, 102, 241, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(99, 102, 241, 0.2);
+}
+
+.lang-toggle-btn:active {
+    transform: translateY(0);
+}
+
+.lang-toggle-btn .flag-icon {
+    font-size: 1.1rem;
+}
+
+.lang-toggle-btn .lang-label {
+    letter-spacing: 0.5px;
+}

@@ -258,88 +258,120 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             console.log('Google Sheets parsed projects:', allProjectsList);
+            
+            // Cache projects list globally in window object or closure
+            window.cachedProjectsList = allProjectsList;
 
-            // 3. Populate Slider in index.html (if track element exists)
-            const sliderTrack = document.getElementById('projectsSliderTrack');
-            if (sliderTrack) {
-                sliderTrack.innerHTML = '';
-                // Show all projects in the homepage slider
-                const sliderItems = allProjectsList;
-                sliderItems.forEach(proj => {
-                    const meta = getProjectMetadata(proj.name, proj.note, proj.imageLink);
-                    const slideHTML = `
-                        <div class="project-slide-card">
-                            <div class="project-app-card glass-card">
-                                <div class="d-flex flex-row align-items-center gap-3">
-                                    <div class="project-app-icon">
-                                        <img onerror="this.onerror=null; this.src='https://placehold.co/100x100';"
-                                            src="${meta.image}" alt="${proj.name}">
-                                    </div>
-                                    <div class="project-app-content flex-grow-1">
-                                        <h4 class="project-app-title-slide">${proj.name}</h4>
-                                        <p class="project-app-desc-slide">${meta.description}</p>
-                                        <div class="d-flex gap-2 flex-wrap">
-                                            ${proj.link && proj.link !== 'personal website' ? 
-                                                `<a href="${proj.link}" target="_blank" class="porto-btn-primary btn-sm-app">Kunjungi Projek</a>` :
-                                                `<span class="tag-skill">#Personal</span>`
-                                            }
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    sliderTrack.insertAdjacentHTML('beforeend', slideHTML);
-                });
+            // Trigger rendering of slider/grid
+            renderProjectsComponents();
+        })
+        .catch(err => console.error('Error fetching sheet data:', err));
+});
 
-                // Initialize the slider logic now that items are loaded
-                initSliderLogic();
+// Render slider and grid projects dynamically with bilingual auto-translation support
+async function renderProjectsComponents() {
+    if (!window.cachedProjectsList || window.cachedProjectsList.length === 0) return;
+    
+    const activeLang = typeof getActiveLanguage === 'function' ? getActiveLanguage() : 'id';
+
+    // 1. Populate Slider in index.html
+    const sliderTrack = document.getElementById('projectsSliderTrack');
+    if (sliderTrack) {
+        sliderTrack.innerHTML = '';
+        for (let proj of window.cachedProjectsList) {
+            const meta = getProjectMetadata(proj.name, proj.note, proj.imageLink);
+            
+            let nameTranslated = proj.name;
+            let descTranslated = meta.description;
+            if (activeLang === 'en' && typeof translateLiveText === 'function') {
+                nameTranslated = await translateLiveText(proj.name);
+                descTranslated = await translateLiveText(meta.description);
             }
 
-            // 4. Populate Grid in projects.html (if grid element exists)
-            const projectsGrid = document.getElementById('projects-grid');
-            if (projectsGrid) {
-                projectsGrid.innerHTML = '';
-                allProjectsList.forEach((proj, idx) => {
-                    const meta = getProjectMetadata(proj.name, proj.note, proj.imageLink);
-                    const category = proj.category;
-                    const delay = (idx % 3) * 100;
-                    
-                    const cardHTML = `
-                        <div class="col-12 col-md-6 col-lg-4 project-grid-item" data-category="${category}" data-aos="fade-up" data-aos-delay="${delay}">
-                            <div class="project-card h-100">
-                                <div class="project-picture-wrapper w-100" style="height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(15, 23, 42, 0.4);">
-                                    <img class="project_picture user-generated-img"
-                                        onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
-                                        src="${meta.image}" alt="${proj.name}" style="width: 100%; height: 100%; object-fit: cover;">
-                                </div>
-                                <div class="project-text">
-                                    <div class="project_name" style="font-size: 1.25rem;">${proj.name}</div>
-                                    <div class="project_desc desc-text" style="font-size: 0.85rem;">
-                                        <p>${meta.description}</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex gap-2 flex-wrap pb-4 px-3 mt-auto">
+            const slideHTML = `
+                <div class="project-slide-card">
+                    <div class="project-app-card glass-card">
+                        <div class="d-flex flex-row align-items-center gap-3">
+                            <div class="project-app-icon">
+                                <img onerror="this.onerror=null; this.src='https://placehold.co/100x100';"
+                                    src="${meta.image}" alt="${proj.name}">
+                            </div>
+                            <div class="project-app-content flex-grow-1">
+                                <h4 class="project-app-title-slide">${nameTranslated}</h4>
+                                <p class="project-app-desc-slide">${descTranslated}</p>
+                                <div class="d-flex gap-2 flex-wrap">
                                     ${proj.link && proj.link !== 'personal website' ? 
-                                        `<a target="_blank" href="${proj.link}" class="project_url porto-btn-primary text-capitalize flex-fill text-center btn-sm-app">Kunjungi</a>` :
+                                        `<a href="${proj.link}" target="_blank" class="porto-btn-primary btn-sm-app" data-translate="visit_project">Kunjungi Projek</a>` :
                                         `<span class="tag-skill">#Personal</span>`
                                     }
                                 </div>
                             </div>
                         </div>
-                    `;
-                    projectsGrid.insertAdjacentHTML('beforeend', cardHTML);
-                });
+                    </div>
+                </div>
+            `;
+            sliderTrack.insertAdjacentHTML('beforeend', slideHTML);
+        }
+        initSliderLogic();
+    }
 
-                // Refresh AOS animations
-                if (window.AOS) {
-                    window.AOS.init();
-                    window.AOS.refresh();
-                }
+    // 2. Populate Grid in projects.html
+    const projectsGrid = document.getElementById('projects-grid');
+    if (projectsGrid) {
+        projectsGrid.innerHTML = '';
+        for (let [idx, proj] of window.cachedProjectsList.entries()) {
+            const meta = getProjectMetadata(proj.name, proj.note, proj.imageLink);
+            const category = proj.category;
+            const delay = (idx % 3) * 100;
+            
+            let nameTranslated = proj.name;
+            let descTranslated = meta.description;
+            if (activeLang === 'en' && typeof translateLiveText === 'function') {
+                nameTranslated = await translateLiveText(proj.name);
+                descTranslated = await translateLiveText(meta.description);
             }
-        })
-        .catch(err => console.error('Error fetching sheet data:', err));
-});
+
+            const cardHTML = `
+                <div class="col-12 col-md-6 col-lg-4 project-grid-item" data-category="${category}" data-aos="fade-up" data-aos-delay="${delay}">
+                    <div class="project-card h-100">
+                        <div class="project-picture-wrapper w-100" style="height: 200px; display: flex; align-items: center; justify-content: center; background: rgba(15, 23, 42, 0.4);">
+                            <img class="project_picture user-generated-img"
+                                onerror="this.onerror=null; this.src='https://placehold.co/400x400';"
+                                src="${meta.image}" alt="${proj.name}" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="project-text">
+                            <div class="project_name" style="font-size: 1.25rem;">${nameTranslated}</div>
+                            <div class="project_desc desc-text" style="font-size: 0.85rem;">
+                                <p>${descTranslated}</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 flex-wrap pb-4 px-3 mt-auto">
+                            ${proj.link && proj.link !== 'personal website' ? 
+                                `<a target="_blank" href="${proj.link}" class="project_url porto-btn-primary text-capitalize flex-fill text-center btn-sm-app" data-translate="visit_btn">Kunjungi</a>` :
+                                `<span class="tag-skill">#Personal</span>`
+                            }
+                        </div>
+                    </div>
+                </div>
+            `;
+            projectsGrid.insertAdjacentHTML('beforeend', cardHTML);
+        }
+
+        // Refresh AOS animations
+        if (window.AOS) {
+            window.AOS.init();
+            window.AOS.refresh();
+        }
+    }
+    
+    // Ensure translation labels update on the newly rendered components
+    if (typeof updateLanguageUI === 'function') {
+        updateLanguageUI();
+    }
+}
+
+// Listen to language switcher event to trigger instantaneous dynamic re-rendering
+document.addEventListener('languageChanged', renderProjectsComponents);
 
 // Separate slider logic initialization function
 function initSliderLogic() {
